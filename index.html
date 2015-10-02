@@ -35,6 +35,23 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+    $(document).ready(function(){
+      var form = $('#email-form');
+      form.submit(function(){
+	$.post("submission.php", 
+	  {email:$('#email').val()},
+	  function(result){
+   	    alert(result);
+   	    $('#email').val('');
+ 	  },
+ 	  "text"
+ 	);
+ 	
+ 	return false;
+      });
+    });
+    </script>
   </head>
 
   <body>
@@ -60,13 +77,12 @@
     </nav>
     <div class="container text-center">
       <img src = 'img/TheCaseryLogo-MEDIUM.png'/>
-      <h1 style="margin-top:-35px; padding-bottom:25px;font-size:65px">Coming Soon</h1>
-      <p>Leave your email and get 50% off discount for your first order!</p>
-      <form class="form-inline">
-        <div class="form-group">
-          <input type="email" class="form-control" id="exampleInputEmail2" placeholder="case@gmail.com">
-        </div>
-        <button id="submit-email" type="submit" class="btn btn-default">Submit</button>
+      <h1 style="margin-top:-35px; padding-bottom:25px;font-size:60px; color:orange">Coming Soon</h1>
+      <p>Leave your email and get 50% off of your first order!</p>
+      
+      <form id = "email-form" class="form-inline" method="post">
+        <input id="email" type = "email" class="form-control" placeholder="case@gmail.com"/>
+        <input id="submit-btn" type="submit" class="btn btn-default"/>
       </form>
     </div> <!-- /container -->
     <p class="test"><p>
