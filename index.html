@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="img/TheCaseryFavIcon.ico">
+    <link rel="icon" href="img/logo.ico">
 
     <title>The Casery Inc.</title>
 
@@ -39,16 +39,15 @@
     $(document).ready(function(){
       var form = $('#email-form');
       form.submit(function(){
-	$.post("submission.php", 
-	  {email:$('#email').val()},
-	  function(result){
-   	    alert(result);
-   	    $('#email').val('');
- 	  },
- 	  "text"
- 	);
- 	
- 	return false;
+      	$.post("submission.php", 
+      	  {email:$('#email').val()},
+      	  function(result){
+         	    alert(result);
+         	    $('#email').val('');
+       	  },
+       	  "text"
+       	);
+   	    return false;
       });
     });
     </script>
@@ -76,15 +75,14 @@
       </div>
     </nav>
     <div class="container text-center">
-      <img src = 'img/TheCaseryLogo-MEDIUM.png'/>
-      <h1 style="margin-top:-35px; padding-bottom:25px;font-size:60px; color:orange">Coming Soon</h1>
-      <p>Leave your email and get 50% off of your first order!</p>
-      
+      <img class="home-pg-img" src = 'img/TheCaseryLogo-MEDIUM.png'/>
+      <h1 class="home-pg-h1" style="">Coming Soon</h1>
+      <p class="home-pg-p center-block">Leave your email and get 50% off of your first order!</p>
       <form id = "email-form" class="form-inline" method="post">
         <input id="email" type = "email" class="form-control" placeholder="case@gmail.com"/>
         <input id="submit-btn" type="submit" class="btn btn-default"/>
       </form>
     </div> <!-- /container -->
-    <p class="test"><p>
+
   </body>
 </html>

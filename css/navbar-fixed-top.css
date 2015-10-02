@@ -1,3 +1,42 @@
 body {
   padding-top: 70px;
+  min-height: 800px;
+}
+
+.home-pg-h1{
+	margin-top: -35px;
+	padding-bottom: 25px;
+	font-size: 60px; 
+	color:orange;
+}
+
+@media screen and (max-width: 768px){
+	.home-pg-img{
+		width: 100%;
+	}
+
+	.home-pg-h1{
+		font-size: 40px;
+		margin-top: -20px;
+		padding-bottom: 15px;
+	}
+
+	.home-pg-p{
+		width: 60%;
+	}
+
+	#email-form{
+		text-align: center;
+	}
+
+	#email{
+		width: 150px;
+		text-align: center;
+		display: inline-block;
+	}
+
+	#submit-btn{
+		text-align: center;
+		display: inline-block;
+	}
 }
