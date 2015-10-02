@@ -1,416 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="initial-scale=1.0, target-densitydpi=device-dpi" /><!-- this is for mobile (Android) Chrome -->
-    <meta name="viewport" content="initial-scale=1.0, width=device-height"><!--  mobile Safari, FireFox, Opera Mobile  -->
-    <title>thecasery.com</title>
+    <link rel="icon" href="img/TheCaseryFavIcon.ico">
 
-    <!-- Bootstrap Core CSS -->
+    <title>The Casery Inc.</title>
+
+    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    
 
+    <!-- Custom styles for this template -->
+    <link href="css/navbar-fixed-top.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/agency.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-	<link href="css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/templatemo_misc.css">
-    <link href="css/templatemo_style.css" rel="stylesheet">
-    <link href="css/dropzone.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,600' rel='stylesheet' type='text/css'>
-
-	<!-- dropzone.js-->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-	<script type="text/javascript" src="libs/flashcanvas.js"></script>
-	<![endif]-->
-	<script src="js/jSignature.min.js"></script>
-    <script src="js/jSignature.js"></script>
-	<script>
-	    $(document).ready(function() {
-	        $("#signature").jSignature()
-	    })
-	</script>
-    <script src="js/dropzone.js"></script>  
-    
-    <script src="js/jquery-1.10.2.min.js"></script> 
-	<script src="js/jquery.lightbox.js"></script>
-	<script src="js/templatemo_custom.js"></script>
-    <script src="libs/modernizr.js"></script>
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="../libs/flashcanvas.js"></script>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style type="text/css">
-        #signatureparent {
-            color:darkblue;
-            background-color:darkgrey;
-            /*max-width:600px;*/
-            padding:20px;
-        }
 
-        /*This is the div within which the signature canvas is fitted*/
-        #signature {
-            border: 2px dotted black;
-            background-color:lightgrey;
-        }
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
 
-        /* Drawing the 'gripper' for touch-enabled devices */ 
-        html.touch #content {
-            float:left;
-            width:92%;
-        }
-        html.touch #scrollgrabber {
-            float:right;
-            width:4%;
-            margin-right:2%;
-            background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAFCAAAAACh79lDAAAAAXNSR0IArs4c6QAAABJJREFUCB1jmMmQxjCT4T/DfwAPLgOXlrt3IwAAAABJRU5ErkJggg==)
-        }
-        html.borderradius #scrollgrabber {
-            border-radius: 1em;
-        }
-	 
-    </style>
-	<style>
-      #map_canvas {
-        width: auto;
-        height: 400px;
-      }
-    </style>
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script>
-	  function disableSubmit() {
-  document.getElementById("submit").disabled = true;
- }
-
-  function activateButton(element) {
-
-      if(element.checked) {
-        document.getElementById("submit").disabled = false;
-       }
-       else  {
-        document.getElementById("submit").disabled = true;
-      }
-
-  }
-      function initialize() {
-        var mapCanvas = document.getElementById('map_canvas');
-        var mapOptions = {
-          center: new google.maps.LatLng(34.025543,-118.457817),
-          zoom: 15,
-		  scrollwheel: false,
-          streetViewControl : true,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-		var myLatlng = new google.maps.LatLng(34.025543,-118.457817);
-        var map = new google.maps.Map(mapCanvas, mapOptions)
-		var marker = new google.maps.Marker({
-			  position: myLatlng,
-			  map: map,
-			  title: 'the casery'
-		  });
-      }
-	
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>   
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script>
-	$('#terms-pane').scroll(function () {
-    if ($(this).scrollTop() == $(this)[0].scrollHeight - $(this).height()) {
-        $('#submit').removeAttr('disabled');
-    }
-});
-    </script>
-
-</head>
-
-<body id="page-top" class="index" onload="disableSubmit()">
-	
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!--<a class="navbar-brand page-scroll" href="#page-top"><img src="images/TransparentSmaller.gif" alt="the casery" style="width=128px;"></a></div>-->
-                <a class="navbar-brand page-scroll" href="#page-top"><strong>the casery</strong></a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-  
-                    <li> <a class="page-scroll" href="#team">Team</a></li>
-                    <li> <a class="page-scroll" href="#portfolio">About Us</a></li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-heading">The Casery</div>
-                <p>Leave your email address and get 15% discount for your first order!</p>
-                <form class="form-inline">
-                  <div class="form-group">
-                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="case@gmail.com">
-                  </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
-                </form>
-            </div>
-        </div>
-    </header>
-    <script type = "text/javascript">
-      var header_height = function(){
-        $('header').css("height", document.documentElement.clientHeight);
-      }
-
-      window.onresize = header_height;
-      $(document).ready(header_height);
-    </script>
-
-    
-
-    <!-- Team Section -->
-    <section id="team">
-    <div class="container">
-            <div class="row">
-              <div class="col-lg-12 text-center">
-                    <h2 class="section-heading" style="color: #FFFFFF; text-align: left;">about us</h2>
-                    
-              </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                  <h2>Case Crew</h2>
-                </div>
-            </div>
-       <div class="templatemo_ourteam">
-     		<div class="container templatemo_hexteam">
-            	<div class="row">
-                	<div class="col-md-3 col-sm-4">
-                        	 <div class="hexagon hexagonteam gallery-item">
-                               <div class="hexagon-in1">
-                                <div class="hexagon-in2" style="background-image: url(images/team/matthew.png);">
-                                </div>
-                            </div>
-                          </div>
-  			       </div>
-                    <div class="col-sm-8 templatemo_servicetxt" >
-                    	<h2>Matthew Harlow, CEO</h2>
-                        <p>Matthew founded The Casery in 2015 with the vision of creating a fully customizable, highly experiential marketplace.  After graduating from the University of Southern California’s Marshall School of Business in 2009, Matthew founded a test prep and private tutoring company, in which he remains active.  He has experience managing a Canadian-based SEO marketing company, as well as owning and operating a retail mail center.  A natural competitor, Matthew made a name for himself at a young age by touring the world as a competitive yo-yoer.  At the age of 16, Matthew became the World Yo-Yo Champion, in addition to two-time US National Champion and International Team Champion, where he served as team captain.  He competed at a state level in billiards and ping pong, was second in the state in Foosball, and is a State Checkers Champion.   He is artistically driven, and has been featured in the Phoenix Film Festival, has won several photography awards, and was a professional graphic design artist while attending New School for the Arts.  His diverse experience in business, world-class competition, and the arts has helped him transform his vision for The Casery into a reality.</p>
-                    </div>
-                    <div class="templatemo_servicecol2">
-                    </div>
-               </div>
-            </div>
-            <div class="clear"></div>
-            <div class="container templatemo_hexteam s_top">
-            	<div class="row">
-                	<div class="col-md-3 col-sm-4 hidden-sm hidden-md hidden-lg">
-                        	 <div class="hexagon hexagonteam gallery-item">
-                               <div class="hexagon-in1">
-                                <div class="hexagon-in2" style="background-image: url(images/team/Skyler.jpg);">
-								<div class="clear"></div>
-                                </div>
-                            </div>
-                          </div>
-  			       </div>
-                    <div class="col-sm-8 templatemo_servicetxt" >
-                      <h2>Skyler Milligan-LeCroy, Project Manager</h2>
-                      <p>Skyler graduated from the University of Southern California Marshall School of Business where he focused on project management, statistical analysis, and data research. He has extensive business experience working for LeCroy &amp; Milligan Associates, a research and evaluation firm, where he successfully implemented a large-scale project management solution. His results exceeded expectations and pioneered faster turnaround times and a smoother throughput process for all future company endeavors. Skyler is also a champion public speaker and debater and was recognized as the Arizona State Champion of Policy Debate in 2012. He focuses his free time on a new health publication about public perceptions of child abuse. Skyler’s charisma, ability to work in a fast-paced team environment, and public speaking and debate skills make him an integral project manager of The Casery.</p>
-                    </div>
-                    <div class="col-md-3 col-sm-4 hidden-xs">
-                        	 <div class="hexagon hexagonteam gallery-item">
-                               <div class="hexagon-in1">
-                                <div class="hexagon-in2" style="background-image: url(images/team/Skyler.jpg);">
-								<div class="clear"></div>
-                                </div>
-                            </div>
-                          </div>
-  			       </div>
-               </div>
-            </div>
-            <div class="clear"></div>
-            <div class="container templatemo_hexteam s_top">
-           	  <div class="row">
-                	<div class="col-md-3 col-sm-4">
-                        	 <div class="hexagon hexagonteam gallery-item">
-                               <div class="hexagon-in1">
-                                <div class="hexagon-in2" style="background-image: url(images/team/marcus.png);">
-								<div class="clear"></div>
-                                </div>
-                            </div>
-                          </div>
-  			       </div>
-                    <div class="col-sm-8 templatemo_servicetxt" >
-                      <h2> Marcus Fiebka, Creative Design Team Leader</h2>
-                      <p>Marcus is an artist and professional photographer with a background in banking. With an emphasis in financial analysis and evaluation, he currently holds his Series 6 and 63 licenses. Marcus’s background in both business and art qualifies him to lead the Creative Design Team and inspire his peers with an unrivaled sense of excitement.</p>
-                      <p>&nbsp;</p>
-                      <p>&nbsp;</p>
-                    </div>
-               </div>
-            </div>
-            <div class="clear"></div>
-            <div class="container templatemo_hexteam s_top">
-            	<div class="row">
-                   <div class="col-md-3 col-sm-4 hidden-sm hidden-md hidden-lg">
-                        	 <div class="hexagon hexagonteam gallery-item">
-                               <div class="hexagon-in1">
-                                <div class="hexagon-in2" style="background-image: url(images/team/charlotte.png);">
-								<div class="clear"></div>
-                                </div>
-                            </div>
-                          </div>
-  			       </div>
-                    <div class="col-sm-8 templatemo_servicetxt" >
-                      <h2>Charlotte Hennington, VP Operations and Logistics</h2>
-                      <p>Charlotte graduated from the University of Southern California’s prestigious film school in 2008, and brings her unique visual eye to The Casery. Her experience at WME Entertainment gives her the ability to organize and drive our fast-paced environment. Charlotte’s background in journalism and education make her our resident wordsmith, and her ability to break through logistical boundaries makes her an integral member of the Creative Design Team. </p>
-                    </div>
-                    <div class="col-md-3 col-sm-4 hidden-xs">
-                        	 <div class="hexagon hexagonteam gallery-item">
-                               <div class="hexagon-in1">
-                                <div class="hexagon-in2" style="background-image: url(images/team/charlotte.png);">
-								<div class="clear"></div>
-                                </div>
-                            </div>
-                          </div>
-  			       </div>
-               </div>
-            </div>
-            <div class="clear"></div>
-            <div class="container templatemo_hexteam s_top">
-            	<div class="row">
-                	<div class="col-md-3 col-sm-4">
-                        	 <div class="hexagon hexagonteam gallery-item">
-                               <div class="hexagon-in1">
-                                <div class="hexagon-in2" style="background-image: url(images/team/jason.jpg);">
-								<div class="clear"></div>
-                                </div>
-                            </div>
-                          </div>
-  			       </div>
-                    <div class="col-sm-8 templatemo_servicetxt" >
-                      <h2>Jason Parnass, Business Development Intern</h2>
-                      <p>Jason is finishing his Masters in Applied Psychology with a focus on product and market research at the University of Southern California with a 3.85 GPA. He has extensive experience as a lead study coordinator and project manager for VA Healthcare System. He currently facilitates The Casery’s decision-making process by maintaining multiple large research databases and improving and innovating protocols and procedures. An avid hiker and chess player, Jason brings his market research skills and sense of humor to The Casery.</p>
-                    </div>
-                    <div class="templatemo_servicecol2">
-                    </div>
-               </div>
-            </div>
-            <div class="clear"></div>
-            <div class="container templatemo_hexteam s_top">
-            	<div class="row">
-                	<div class="col-md-3 col-sm-4 hidden-sm hidden-md hidden-lg">
-                        	 <div class="hexagon hexagonteam gallery-item">
-                               <div class="hexagon-in1">
-                                <div class="hexagon-in2" style="background-image: url(images/team/Nico.jpg);">
-								<div class="clear"></div>
-                                </div>
-                            </div>
-                          </div>
-  			       </div>
-                    <div class="col-sm-8 templatemo_servicetxt" >
-                      <h2>Nico, Financial Manager</h2>
-                      <p>Nico is a published mathematician from the University of California, Davis and is actively pursuing his CPA with the University of California, Los Angeles.  As a senior accountant for a mid-sized management company and a major conglomerate, he is experienced in high-volume transactions and multi-entity cash flow management. To supplement his analytical skills, Nico is also a classically trained acrylic painter, pastel artist, and choral singer.  Nico is an integral part of The Casery who is not only adept at bottom-line accounting but also understands that the journey is as important as the goal. </p>
-                  </div>
-                    <div class="col-md-3 col-sm-4 hidden-xs">
-                        	 <div class="hexagon hexagonteam gallery-item">
-                               <div class="hexagon-in1">
-                                <div class="hexagon-in2" style="background-image: url(images/team/Nico.jpg);">
-								<div class="clear"></div>
-                                </div>
-                            </div>
-                          </div>
-  			       </div>
-               </div>
-            </div>
-            
-     </div>
-    </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section id="portfolio" class="bg-light-gray" style="background-image: url(images/company_background.jpg);background-repeat:none; background-attachment: scroll; background-position: center center;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading" style="color: #010101">Company</h2>
-                    <h2 style="color: #000000;text-align: center">The casery</h2>
-                    <p> Here at The Casery, we are a group of creative, energetic people inspired by the dream of bringing you artistically driven cell phone cases.  Like our cases, everyone’s pretty unique here, and we have a lot of fun together.</p>
-                    <p> We’re each an artist in our own right, whether that art is filmmaking, photography, or graphic design.  That’s why the artists are our priority, and we aim to showcase their work in the best way possible.  We believe that everyone deserves a cell phone case that they enjoy looking at all day, every day (because, let’s face it, you look at your cell phone more often than your girlfriend).  And true art is the way to ensure that our cases offer more than just protection. </p>
-                    <hr>
-                    <h3 class="" style="color: #000000; font-size: 24px;">Our Mission</h3>
-                    <h3 class="" style="font-size: 18px;">We live by the case, we die by the case. Inspiring creativity in a seriously fun way.</h3>
-                  <h3 class="" style="color: #000000; font-size: 24px;">Our Dream</h3>
-                  <h3 style=" font-style: normal; font-size: 18px;">The Casery—powering the new wave of customization. </h3>
-                  <h3 class="" style="color: #000000; font-size: 24px;">Core Values</h3>
-                  <hr>
-                  <h4 style="color: #010101; text-align: center;">Embrace Your Inner Artist</h4>
-                      <p style="text-align: center">Some of us draw. Some paint. Others design. And some can barely hold a pencil. We have a case for everyone. Whether you want to design it from the ground up, start with a base design and make it your own, or have a talented artists design it for you, The Casery has you (and your phone) covered.</p>
-                  <h4 style="color: #010101; text-align: center;"> Quality First</h4>
-                      <p style="text-align: center">The Casery believes in high quality business. Our products are designed to reach for perfection, in both artistic design and top grade materials. </p>
-                  <h4 style="color: #010101; text-align: center;">Support the World</h4>
-                      <p style="text-align: center">Our company is about expression, and we think the best way to get the word out is through The Casery. From supporting local artists, to offering non-profit designs, The Casery will use expression as a force for good.</p>
-                  <h4 style="color: #010101; text-align: center;"> Individuality</h4>
-                      <p style="text-align: center">We like people to be different. We encourage our employees to be just as unique as our cases. </p>
-                  <h4 style="color: #010101; text-align: center;">Creation That’s Fun</h4>
-                      <p style="text-align: center">The retail industry is changing rapidly, but people will always follow the fun. We see the fun as the most important part of our business, and we’d like to keep it that way.</p>
-                  <h4 style="color: #010101; text-align: center;">Stay Connected</h4>
-                      <p style="text-align: center">We’re the Case Crew for a reason. We’re friends. And we’re friends with our artists and community, too. Keep us posted, and tell us what you’d like to see next.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  </head>
 
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
-
-
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/agency.js"></script>
-    
-    
-
-</body>
-
+  <body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">The Casery</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="team.html">Team</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="container text-center">
+      <img src = 'img/TheCaseryLogo-MEDIUM.png'/>
+      <h1 style="margin-top:-35px; padding-bottom:25px;font-size:65px">Coming Soon</h1>
+      <p>Leave your email and get 50% off discount for your first order!</p>
+      <form class="form-inline">
+        <div class="form-group">
+          <input type="email" class="form-control" id="exampleInputEmail2" placeholder="case@gmail.com">
+        </div>
+        <button id="submit-email" type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div> <!-- /container -->
+    <p class="test"><p>
+  </body>
 </html>
